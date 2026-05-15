@@ -6,6 +6,11 @@ import sys
 import time
 from datetime import datetime, timezone, timedelta
 
+# Windows 콘솔 UTF-8 출력
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 import feedparser
 from dotenv import load_dotenv
 
