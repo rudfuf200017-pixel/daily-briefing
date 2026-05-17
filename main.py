@@ -11,7 +11,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-import feedparser
+import feedparser_compat as feedparser
 from dotenv import load_dotenv
 
 from feeds import MARKET_NEWS_FEEDS, NAVER_BLOG_FEEDS, YOUTUBE_FEEDS
